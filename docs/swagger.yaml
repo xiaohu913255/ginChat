@@ -1,0 +1,123 @@
+info:
+  contact: {}
+paths:
+  /findUserByNameAndPwd:
+    post:
+      parameters:
+      - description: 用户名
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        required: true
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 登录
+      tags:
+      - 登录
+  /index:
+    get:
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - 首页
+  /logout:
+    get:
+      parameters:
+      - description: 用户id
+        in: query
+        name: id
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 删除用户
+      tags:
+      - 注销
+  /register:
+    get:
+      parameters:
+      - description: 用户名
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        required: true
+        type: string
+      - description: 确认密码
+        in: query
+        name: repassword
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 添加用户
+      tags:
+      - 用户注册
+  /updateInfo:
+    post:
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      - description: password
+        in: formData
+        name: password
+        type: string
+      - description: phone
+        in: formData
+        name: phone
+        type: string
+      - description: identity
+        in: formData
+        name: identity
+        type: string
+      - description: email
+        in: formData
+        name: email
+        type: string
+      - description: clientIp
+        in: formData
+        name: clientIp
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 更新信息
+      tags:
+      - 更新用户信息
+  /user/getUserList:
+    get:
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 所有用户
+      tags:
+      - 首页
+swagger: "2.0"

@@ -1,0 +1,9 @@
+mysql:
+  dns: root:123456@tcp(127.0.0.1:3306)/ginChat?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  addr: "127.0.0.1:6379"
+  password: ""
+  DB: 0     #使用的DB
+  poolSize: 30  #连接池大小
+  minIdleConn: 30   #最小空闲连接数
